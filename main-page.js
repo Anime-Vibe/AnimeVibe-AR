@@ -84,8 +84,8 @@ let animeData = [
         searchName: 'death note',
         img: 'https://cdn.myanimelist.net/images/anime/9/9453.jpg',
          video: [
-        { label: 'Trailer', url: 'Video/Death note.1.mp4' },
-        { label: 'حرق', url: 'Video/Death note.2.mp4' },
+        { label: 'Trailer', url: 'Video/Deathnote.1.mp4' },
+        { label: 'حرق', url: 'Video/Deathnote.2.mp4' },
     ],
         releaseYear: '2006 - 2007',
         episodes: '37 Episodes',
