@@ -22,11 +22,34 @@ document.addEventListener('click', function(e) {
 
 let animeData = [
     {
+        id: 'jjk',
+        title: 'Jujutsu Kaisen',
+        searchName: 'jujutsu kaisen jjk gojo',
+        img: 'https://cdn.myanimelist.net/images/anime/1171/109222.jpg',
+        video: [
+        { label: 'Trailer', url: 'Video/jjk.1.mp4' },
+        { label: 'Trailer', url: 'Video/Jjk.3.mp4' },
+        { label: 'حرق', url: 'Video/JJk.2.mp4' },
+    ],
+        releaseYear: '2020 - Ongoing',
+        episodes: '47+ Episodes',
+        seasons: '2 Seasons',
+        classification: '+20',
+        rating: '9.4',
+        studio: 'MAPPA',
+        genres: ['Action', 'Demons', 'Supernatural'],
+        fullStory: [{ type: 'text', content: 'قصة يوجي إيتادوري الذي يبتلع إصبع الملك سوكونا الملعون، وينضم إلى مدرسة جوجوتسو لمحاربة اللعنات.' }]
+    },
+    
+    {
         id: 'aot',
         title: 'Attack on Titan',
         searchName: 'attack on titan aot shingeki',
         img: 'https://cdn.myanimelist.net/images/anime/10/47347.jpg',
-        video: 'https://www.youtube.com/embed/MGRm2VdiG48',
+        video: [
+        { label: 'Trailer', url: 'Video/Atack.1.mp4' },
+        { label: 'حرق', url: 'Video/Atack.2.mp4' },
+    ],
         releaseYear: '2013 - 2023',
         episodes: '89 Episodes',
         seasons: '4 Seasons',
@@ -36,41 +59,54 @@ let animeData = [
         genres: ['Action', 'Mystery', 'Drama'],
         fullStory: [{ type: 'text', content: 'البشرية محصورة خلف جدران ضخمة لحمايتهم من العمالقة، إلى أن يتم كشف الحقيقة المروعة وراء هذه الجدران.' }]
     },
-    {
-        id: 'jjk',
-        title: 'Jujutsu Kaisen',
-        searchName: 'jujutsu kaisen jjk gojo',
-        img: 'https://cdn.myanimelist.net/images/anime/1171/109222.jpg',
-        video: 'https://www.youtube.com/embed/f7R6A5n_nK8',
-        releaseYear: '2020 - Ongoing',
-        episodes: '47+ Episodes',
-        seasons: '2 Seasons',
-        classification: '+20',
-        rating: '9.0',
-        studio: 'MAPPA',
-        genres: ['Action', 'Demons', 'Supernatural'],
-        fullStory: [{ type: 'text', content: 'قصة يوجي إيتادوري الذي يبتلع إصبع الملك سوكونا الملعون، وينضم إلى مدرسة جوجوتسو لمحاربة اللعنات.' }]
-    },
-    { id: 'hxh',
-     title: 'Hunter x Hunter',
-      searchName: 'hunter x hunter gon',
-       img: 'https://cdn.myanimelist.net/images/anime/1337/99013.jpg',
-       video: 'https://www.youtube.com/embed/7IyS0uEpBKM',
-        releaseYear: '2011 - 2014',
-         episodes: '148 Episodes',
-          seasons: '6 Seasons',
-           rating: '9.0',
-            studio: 'Madhouse',
-             genres: ['Action', 'Adventure', 'Fantasy'],
-              fullStory: [{ type: 'text', content: 'جون فريكس يشرع في رحلة صعبة ليصبح صياداً محترفاً ويجد والده المفقود.' }] 
-            },
 
-            
-    { id: 'fma',
+
+
+      {
+        id: 'sl',
+        title: 'Solo Leveling',
+        searchName: 'solo leveling',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6uv4AS8WafnzkFcEAj743kvU8rGZYYwGQcRFCGDjAfQ&s=10',
+         video: [
+        { label: 'Trailer', url: 'Video/SSOLO.1.mp4' },
+        { label: 'حرق', url: 'Video/SSOLO.2.mp4' },
+    ],
+        releaseYear: '2024 - Ongoing',
+        episodes: '25+ Episodes',
+        seasons: '2 Seasons',
+        classification: '+12',
+        rating: '8.8',
+        studio: 'A-1 Pictures',
+        genres: ['Action', 'Fantasy'],
+        fullStory: [{ type: 'text', content: 'أضعف صياد في العالم يحصل على نظام فريد يسمح له بالارتقاء في المستوى ويصبح الأقوى.' }]
+    },
+
+
+     { id: 'opm',
+     title: 'One Punch Man',
+      searchName: 'one punch man',
+       img: 'https://cdn.myanimelist.net/images/anime/12/76049.jpg',
+      video: [
+        { label: 'Trailer', url: 'Video/One Punch Man.1.mp4' },
+        { label: 'حرق', url: 'Video/One Punch Man.2.mp4' },
+    ],
+        releaseYear: '2015 - 2019',
+         episodes: '24 Episodes',
+          seasons: '2 Seasons',
+           rating: '8.5',
+            studio: 'Madhouse / J.C.Staff',
+             genres: ['Action', 'Comedy', 'Parody'],
+              fullStory: [{ type: 'text', content: 'سايتاما، البطل الذي يهزم أي خصم بلكمة واحدة، يعاني من الملل بسبب قوته المطلقة.' }] 
+            },
+       
+    
+     { id: 'fma',
      title: 'Fullmetal Alchemist: Brotherhood',
       searchName: 'fullmetal alchemist brotherhood',
        img: 'https://cdn.myanimelist.net/images/anime/1223/96541.jpg',
-       video: 'https://www.youtube.com/embed/--3TkX8D4hM',
+       video: [
+        { label: 'Trailer', url: 'Video/Fullmetal Alchemist.2.mp4' },
+    ],
         releaseYear: '2009 - 2010',
          episodes: '64 Episodes',
           seasons: '1 Season',
@@ -80,88 +116,7 @@ let animeData = [
               fullStory: [{ type: 'text', content: 'الأخوان إلريك يبحثان عن حجر الفيلسوف لاستعادة جسديهما بعد محاولة خيمياء فاشلة.' }]
              },
 
-
-    {
-        id: 'gintama-the-final',
-        title: "Gintama: The Final",
-        searchName: "gintama the final",
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0OHIzYJNLb74IALhqoL68XVEC8XhLAf8djxxQ9FDyQ&s=10',
-        video: 'https://www.youtube.com/embed/A3AJ4d9dfBU',
-        releaseYear: '2021',
-        episodes: 'Movie',
-        seasons: '1 Movie',
-        classification: '+16',
-        rating: '9.05',
-        studio: "Bandai Namco Pictures",
-        genres: ['Comedy', 'Action', 'Sci-Fi', 'Drama'],
-        fullStory: [{ type: 'text', content: "الفيلم الأخير لسلسلة جينتاما، حيث يواجه جينتوكي وأصدقاؤه التهديد الأخير لوجودهم، في خاتمة ملحمية تمزج بين الكوميديا الرائعة والإثارة." }]
-    },
-
-
-    {
-        id: 'a-silent-voice',
-        title: "A Silent Voice",
-        searchName: "a silent voice koe no katachi",
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbB2bmfSLrLMHX3iF4l4413MDvUY6Wd3dxPc4Y2Yc1uA&s=10',
-        video: 'https://www.youtube.com/embed/nfK6UgLra7g',
-        releaseYear: '2016',
-        episodes: 'Movie',
-        seasons: '1 Movie',
-        classification: '+13',
-        rating: '9.02',
-        studio: "Kyoto Animation",
-        genres: ['Drama', 'Romance', 'Psychological', 'School'],
-        fullStory: [{ type: 'text', content: "صبي يتم نبذه بسبب تنمره على زميلة صماء في طفولته. في المدرسة الثانوية، يحاول التكفير عن خطئه وإعادة التواصل معها في رحلة مؤثرة عن الندم والغفران." }]
-    },
-
-
-    { id: 'vinland',
-     title: 'Vinland Saga',
-      searchName: 'vinland saga',
-       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdobuAWCgKQ39LMnsTN11cqtwjmfMdtpiuUE06CPXVJQ&s=10',
-       video: 'https://www.youtube.com/embed/f8T3i2E6KJo',
-        releaseYear: '2019 - 2023',
-         episodes: '48 Episodes',
-          seasons: '2 Seasons',
-           rating: '8.8',
-            studio: 'WIT / MAPPA',
-             genres: ['Action', 'Historical', 'Drama'],
-              fullStory: [{ type: 'text', content: 'ثورفين، الفايكينج الشاب، يسعى للانتقام لمقتل والده قبل أن يكتشف المعنى الحقيقي للسلام.' }] 
-            },
-
-
-
-    {
-        id: 'haikyuu_final',
-        title: 'Haikyuu!! The Dumpster Battle',
-        searchName: 'haikyuu final movie',
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdNsvEyuFXew4_AzxLAGIlgoOMmEhoKsn9r1q4s6u0kg&s=10',
-        video: 'https://www.youtube.com/embed/M6_9Q2g6mM4',
-        releaseYear: '2024',
-        episodes: 'Movie',
-        seasons: 'Movie',
-        rating: '8.9',
-        studio: 'Production I.G',
-        genres: ['Sports', 'Drama'],
-        fullStory: [{ type: 'text', content: 'المباراة النهائية بين كاراسونو ونيكوما في البطولة الوطنية للربيع.' }]
-    },
-    { id: 'silentvoice',
-        title: 'A Silent Voice',
-        searchName: 'a silent voice koe no katachi',
-        img: 'https://cdn.myanimelist.net/images/anime/1122/96435.jpg',
-        video: 'https://www.youtube.com/embed/nfK6UgLra7g',
-        releaseYear: '2016',
-        episodes: 'Movie',
-        seasons: 'Movie',
-        rating: '8.9',
-        studio: 'Kyoto Animation',
-        genres: ['Drama', 'School'],
-        fullStory: [{ type: 'text', content: 'صبي يتنمر على زميلته الصماء في المدرسة الابتدائية، ثم يحاول لاحقاً التكفير عن أفعاله والتواصل معها.' }] 
-    },
-
-
-
-
+             
 
 ];
 
@@ -214,100 +169,83 @@ function openAnime(id) {
     const anime = animeData.find(a => a.id === id);
     if (!anime) return;
 
+    // جلب حالة المشاهدة لاحقاً
     let watchLaterList = JSON.parse(localStorage.getItem('animeWatchLater')) || [];
     const isInWatchLater = watchLaterList.includes(anime.id);
     const watchLaterIcon = isInWatchLater ? '⭐' : '📺';
     const watchLaterClass = isInWatchLater ? 'active' : '';
 
+    // === 1. تجهيز الفيديو والتبويبات ===
     let videoHTML = '';
     let videoTabsHTML = '';
 
+    // إنشاء أزرار التبويب بناءً على المصفوفة الموجودة في البيانات
     if (Array.isArray(anime.video) && anime.video.length > 0) {
-        videoTabsHTML = `
-            <div class="modal-video-tabs-wrapper">
-                <div class="video-tab-container">
-                    ${anime.video.map((vid, index) => `
-                        <button class="video-tab-btn ${index === 0 ? 'active' : ''}" 
-                                onclick="switchVideo(this, '${vid.url.replace(/'/g, "\\'")}')">
-                            ${vid.label || `Video ${index + 1}`}
-                        </button>
-                    `).join('')}
-                </div>
-            </div>
-        `;
+        videoTabsHTML = anime.video.map((vid, index) => 
+            `<button class="video-tab-btn ${index === 0 ? 'active' : ''}" 
+                    onclick="switchVideo(this, '${vid.url.replace(/'/g, "\\'")}')">
+                ${vid.label || `Video ${index + 1}`}
+            </button>`
+        ).join('');
+
         videoHTML = `
             <div class="video-container-right" id="activeVideoContainer">
-                <video 
-                    src="${anime.video[0].url}" 
-                    controls 
-                    autoplay 
-                    playsinline
-                    onplay="pauseBackgroundMusic()"
-                    style="width: 100%; height: 100%; object-fit: contain; background-color: #000; border-radius: 12px;">
-                    عذراً، متصفحك لا يدعم تشغيل الفيديو.
-                </video>
-            </div>
-        `;
-    } else if (anime.video && anime.video.trim() !== '') {
-        videoHTML = `
-            <div class="video-container-right">
-                <video 
-                    src="${anime.video}" 
-                    controls 
-                    autoplay 
-                    playsinline
-                    onplay="pauseBackgroundMusic()"
-                    style="width: 100%; height: 100%; object-fit: contain; background-color: #000; border-radius: 12px;">
-                    عذراً، متصفحك لا يدعم تشغيل الفيديو.
+                <video src="${anime.video[0].url}" controls autoplay playsinline 
+                       onplay="pauseBackgroundMusic()"
+                       style="width:100%; height:100%; object-fit:cover;">
                 </video>
             </div>
         `;
     } else {
-        videoHTML = `<div class="video-container-right" style="display:flex; align-items:center; justify-content:center; border:1px dashed var(--border-color); color:var(--text-muted); font-size:0.9rem;">No Trailer Available</div>`;
+        videoHTML = `<div class="video-container-right" style="display:flex; align-items:center; justify-content:center; color:#666;">No Trailer Available</div>`;
     }
 
+    // === 2. هيكل الـ Modal الجديد زي الصورة بالضبط ===
     let modalBodyHTML = `
+        <!-- الصف العلوي: زر الرجوع + التبويبات + زر watch later -->
         <div class="modal-top-row">
             <button class="close-btn" onclick="closeAnime()">⬅ Back to Home</button>
-            ${videoTabsHTML}
+            <div class="video-tab-container">${videoTabsHTML}</div>
             <button class="watch-later-btn ${watchLaterClass}" onclick="toggleWatchLater('${anime.id}', this)">${watchLaterIcon} Watch Later</button>
         </div>
-    `;
 
-    modalBodyHTML += `
+        <!-- المحتوى الأساسي: صورة + معلومات سريعة (يسار) | فيديو (يمين) -->
         <div class="modal-content-split">
             <div class="modal-left">
-                <div class="modal-img-wrapper">
-                    <img src="${anime.img}" alt="${anime.title}" class="modal-img-left">
-                </div>
+                <img src="${anime.img}" alt="${anime.title}" class="modal-img-left">
                 <h2 class="modal-title-left">${anime.title}</h2>
+                <div class="anime-quick-story">
+                    ${anime.fullStory && anime.fullStory.length > 0 ? anime.fullStory[0].content.substring(0, 200) + '...' : ''}
+                </div>
+                <div class="genres-list">
+                    ${anime.genres.map(genre => `<span class="genre-tag">${genre}</span>`).join('')}
+                </div>
             </div>
+            
             <div class="modal-right">
                 ${videoHTML}
             </div>
         </div>
 
-        <div class="anime-meta-grid" style="margin-top: 15px;">
-            <div class="meta-item">Release Year: <strong>${anime.releaseYear}</strong></div>
-            <div class="meta-item">Episodes: <strong>${anime.episodes}</strong></div>
-            <div class="meta-item">Seasons: <strong>${anime.seasons}</strong></div>
-            <div class="meta-item classification-highlight">
-                Classification: <strong><span class="${getClassificationClass(anime.classification)}">${anime.classification ?? 'General'}</span></strong>
-            </div>
-            <div class="meta-item">Rating: <strong>${anime.rating} / 10</strong></div>
-            <div class="meta-item">Studio: <strong>${anime.studio}</strong></div>
+        <!-- شبكة البيانات (Release, Studio, Episodes) -->
+        <div class="anime-meta-grid">
+            <div class="meta-item">📅 Release Year<br><strong>${anime.releaseYear}</strong></div>
+            <div class="meta-item">📺 Episodes<br><strong>${anime.episodes}</strong></div>
+            <div class="meta-item">📦 Seasons<br><strong>${anime.seasons}</strong></div>
+            <div class="meta-item classification-highlight">🔞 Classification<br><strong><span class="${getClassificationClass(anime.classification)}">${anime.classification ?? 'General'}</span></strong></div>
+            <div class="meta-item">⭐ Rating<br><strong>${anime.rating} / 10</strong></div>
+            <div class="meta-item">🏢 Studio<br><strong>${anime.studio}</strong></div>
         </div>
-        <div class="genres-list">${anime.genres.map(genre => `<span class="genre-tag">${genre}</span>`).join('')}</div>
         
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
+        <!-- قصة كاملة (تحت البيانات) -->
+        ${anime.fullStory.map(item => `<p class="story-paragraph">${item.content}</p>`).join('')}
+        
+        <!-- خط فاصل -->
+        <hr style="border:0; border-top:1px solid rgba(255,255,255,0.05); margin: 20px 0;">
     `;
-    
-    anime.fullStory.forEach(item => {
-        if (item.type === 'text') modalBodyHTML += `<p class="story-paragraph">${item.content}</p>`;
-    });
 
+    // === 3. معالجة الروابط (أزرار المشاهدة والتحميل) ===
     const links = animeLinks[anime.id];
-    
     let availableSeasons = [];
     if (links && links.seasons && links.seasons.length > 0) {
         availableSeasons = links.seasons;
@@ -315,41 +253,43 @@ function openAnime(id) {
         availableSeasons = Object.keys(links.episodes);
     }
 
-    let seasonsBtnsHTML = '';
-    if (availableSeasons.length > 0) {
-        seasonsBtnsHTML = availableSeasons.map(sNum => 
-            `<button class="btn season-select-btn" onclick="selectSeason('${anime.id}', '${sNum}')">📦 Season ${sNum}</button>`
-        ).join('');
-    } else {
-        seasonsBtnsHTML = `<div style="color:#94a3b8; text-align:center;">No seasons available</div>`;
-    }
+    let seasonsBtnsHTML = availableSeasons.length > 0 
+        ? availableSeasons.map(sNum => `<button class="season-select-btn" onclick="selectSeason('${anime.id}', '${sNum}')">📦 Season ${sNum}</button>`).join('')
+        : `<div style="color:#666; text-align:center;">No seasons available</div>`;
 
+    // === 4. أزرار التحكم السفلية (Watch Now, Seasons, Download) ===
     modalBodyHTML += `
         <div class="video-functions">
             <button class="btn watch-btn" onclick="window.open('${links?.watch || '#'}', '_blank')">▶ Watch Now</button>
             <button class="btn seasons-btn" onclick="toggleDropdown('seasons-${anime.id}')">📦 Seasons</button>
-            
-            <div class="seasons-dropdown" id="seasons-${anime.id}">
-                <div class="dropdown-title">📦 Choose Season</div>
-                ${seasonsBtnsHTML}
-            </div>
-
-            <div class="episodes-panel" id="episodes-panel-${anime.id}">
-                <div class="episodes-panel-header" id="episodes-panel-header-${anime.id}">Select a Season</div>
-                <div class="episodes-panel-list" id="episodes-panel-list-${anime.id}">
-                    <div style="color:#94a3b8; text-align:center; padding: 20px;">Please select a season from the dropdown.</div>
-                </div>
-            </div>
-
-            <button class="btn download-btn" onclick="window.open('${links?.download || '#'}', '_blank')">⬇ Download Now</button>
+            <button class="btn download-btn" onclick="window.open('${links?.download || '#'}', '_blank')">⬇ Download</button>
         </div>
+
+        <!-- القوائم المنبثقة للحلقات -->
+        <div class="seasons-dropdown" id="seasons-${anime.id}">
+            <div style="text-align:center; font-weight:bold; border-bottom:1px solid #333; padding-bottom:10px; margin-bottom:10px;">📦 Choose Season</div>
+            ${seasonsBtnsHTML}
+        </div>
+
+        <div class="episodes-panel" id="episodes-panel-${anime.id}">
+            <div class="episodes-panel-header" id="episodes-panel-header-${anime.id}" style="text-align:center; font-weight:bold; border-bottom:1px solid #333; padding-bottom:10px; margin-bottom:10px;">Select a Season</div>
+            <div class="episodes-panel-list" id="episodes-panel-list-${anime.id}">
+                <div style="color:#666; text-align:center; padding:20px;">Please select a season from the dropdown.</div>
+            </div>
+        </div>
+        
         <div class="overlay-close" id="overlay-${anime.id}" onclick="closeDropdowns('${anime.id}')"></div>
     `;
     
+    // حقن الكود داخل النافذة
     document.getElementById('modalBody').innerHTML = modalBodyHTML;
     animeModal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
+/* =======================================================
+   نهاية التعديل
+   ======================================================= */
+
 function getClassificationClass(classification) {
     const value = String(classification || '').trim();
     if (value.includes('7')) return 'classification-7';
@@ -369,6 +309,7 @@ function closeAnime() {
         modalBody.innerHTML = ''; 
     }
 }
+
 searchInput.addEventListener('input', function(e) {
     const term = e.target.value.trim().toLowerCase();
     let visibleCount = 0;
@@ -417,11 +358,15 @@ function filterCategory(type) {
     document.getElementById('filterDropdown').classList.remove('active');
     const cards = document.querySelectorAll('.anime-card');
     let visibleCount = 0;
+    const noResults = document.getElementById('no-results');
     let favorites = JSON.parse(localStorage.getItem('animeFavorites')) || [];
     let watchLaterList = JSON.parse(localStorage.getItem('animeWatchLater')) || [];
 
     if (type === 'Show All') {
-        cards.forEach(card => { card.classList.remove('hidden'); visibleCount++; });
+        cards.forEach(card => {
+            card.classList.remove('hidden');
+            visibleCount++;
+        });
         noResults.style.display = 'none';
         return;
     }
@@ -503,6 +448,12 @@ function toggleDropdown(showId) {
     const overlay = document.getElementById(`overlay-${animeId}`);
     if (overlay) overlay.classList.toggle('active');
 }
+
+function closeDropdowns(animeId) {
+    document.getElementById('episodes-' + animeId)?.classList.remove('active');
+    document.getElementById('seasons-' + animeId)?.classList.remove('active');
+    document.getElementById('overlay-' + animeId)?.classList.remove('active');
+}
 function selectSeason(animeId, seasonNum) {
     const seasonDropdown = document.getElementById(`seasons-${animeId}`);
     if(seasonDropdown) seasonDropdown.classList.remove('active');
@@ -544,12 +495,6 @@ function selectSeason(animeId, seasonNum) {
     const overlay = document.getElementById(`overlay-${animeId}`);
     if (overlay) overlay.classList.remove('active');
 }
-function closeDropdowns(animeId) {
-    document.getElementById('episodes-' + animeId)?.classList.remove('active');
-    document.getElementById('seasons-' + animeId)?.classList.remove('active');
-    document.getElementById('overlay-' + animeId)?.classList.remove('active');
-}
-
 function toggleFavorite(animeId, btnElement) {
     let favorites = JSON.parse(localStorage.getItem('animeFavorites')) || [];
     if (favorites.includes(animeId)) {
@@ -580,3 +525,400 @@ function toggleWatchLater(animeId, btnElement) {
 
 renderAnimeCards(animeData);
 updateStats();
+
+
+// دالة لتبديل الفيديو عند الضغط على الأزرار
+function switchVideo(btnElement, newUrl) {
+    const parentContainer = btnElement.closest('.video-tab-container');
+    parentContainer.querySelectorAll('.video-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    btnElement.classList.add('active');
+
+    const videoContainer = document.getElementById('activeVideoContainer');
+    if (videoContainer) {
+        const videoTag = videoContainer.querySelector('video');
+        if (videoTag) {
+            videoTag.src = newUrl;
+            videoTag.play().catch(() => {}); 
+        }
+    }
+}function openAnime(id) {
+    const anime = animeData.find(a => a.id === id);
+    if (!anime) return;
+
+    // جلب حالة المشاهدة لاحقاً
+    let watchLaterList = JSON.parse(localStorage.getItem('animeWatchLater')) || [];
+    const isInWatchLater = watchLaterList.includes(anime.id);
+    const watchLaterIcon = isInWatchLater ? '⭐' : '📺';
+    const watchLaterClass = isInWatchLater ? 'active' : '';
+
+    // === 1. تجهيز الفيديو والتبويبات ===
+    let videoHTML = '';
+    let videoTabsHTML = '';
+
+    // إنشاء أزرار التبويب بناءً على المصفوفة الموجودة في البيانات
+    if (Array.isArray(anime.video) && anime.video.length > 0) {
+        videoTabsHTML = anime.video.map((vid, index) => 
+            `<button class="video-tab-btn ${index === 0 ? 'active' : ''}" 
+                    onclick="switchVideo(this, '${vid.url.replace(/'/g, "\\'")}')">
+                ${vid.label || `Video ${index + 1}`}
+            </button>`
+        ).join('');
+
+        videoHTML = `
+            <div class="video-container-right" id="activeVideoContainer">
+                <video src="${anime.video[0].url}" controls autoplay playsinline 
+                       onplay="pauseBackgroundMusic()"
+                       style="width:100%; height:100%; object-fit:cover;">
+                </video>
+            </div>
+        `;
+    } else {
+        videoHTML = `<div class="video-container-right" style="display:flex; align-items:center; justify-content:center; color:#666;">No Trailer Available</div>`;
+    }
+
+    // === 2. هيكل الـ Modal الجديد زي الصورة بالضبط ===
+    let modalBodyHTML = `
+        <!-- الصف العلوي: زر الرجوع + التبويبات + زر watch later -->
+        <div class="modal-top-row">
+            <button class="close-btn" onclick="closeAnime()">⬅ Back to Home</button>
+            <div class="video-tab-container">${videoTabsHTML}</div>
+            <button class="watch-later-btn ${watchLaterClass}" onclick="toggleWatchLater('${anime.id}', this)">${watchLaterIcon} Watch Later</button>
+        </div>
+
+        <!-- المحتوى الأساسي: صورة + معلومات سريعة (يسار) | فيديو (يمين) -->
+        <div class="modal-content-split">
+            <div class="modal-left">
+                <img src="${anime.img}" alt="${anime.title}" class="modal-img-left">
+                <h2 class="modal-title-left">${anime.title}</h2>
+                <div class="anime-quick-story">
+                    ${anime.fullStory && anime.fullStory.length > 0 ? anime.fullStory[0].content.substring(0, 200) + '...' : ''}
+                </div>
+                <div class="genres-list">
+                    ${anime.genres.map(genre => `<span class="genre-tag">${genre}</span>`).join('')}
+                </div>
+            </div>
+            
+            <div class="modal-right">
+                ${videoHTML}
+            </div>
+        </div>
+
+        <!-- شبكة البيانات (Release, Studio, Episodes) -->
+        <div class="anime-meta-grid">
+            <div class="meta-item">📅 Release Year<br><strong>${anime.releaseYear}</strong></div>
+            <div class="meta-item">📺 Episodes<br><strong>${anime.episodes}</strong></div>
+            <div class="meta-item">📦 Seasons<br><strong>${anime.seasons}</strong></div>
+            <div class="meta-item classification-highlight">🔞 Classification<br><strong><span class="${getClassificationClass(anime.classification)}">${anime.classification ?? 'General'}</span></strong></div>
+            <div class="meta-item">⭐ Rating<br><strong>${anime.rating} / 10</strong></div>
+            <div class="meta-item">🏢 Studio<br><strong>${anime.studio}</strong></div>
+        </div>
+        
+        <!-- قصة كاملة (تحت البيانات) -->
+        ${anime.fullStory.map(item => `<p class="story-paragraph">${item.content}</p>`).join('')}
+        
+        <!-- خط فاصل -->
+        <hr style="border:0; border-top:1px solid rgba(255,255,255,0.05); margin: 20px 0;">
+    `;
+
+    // === 3. معالجة الروابط (أزرار المشاهدة والتحميل) ===
+    const links = animeLinks[anime.id];
+    let availableSeasons = [];
+    if (links && links.seasons && links.seasons.length > 0) {
+        availableSeasons = links.seasons;
+    } else if (links && links.episodes) {
+        availableSeasons = Object.keys(links.episodes);
+    }
+
+    let seasonsBtnsHTML = availableSeasons.length > 0 
+        ? availableSeasons.map(sNum => `<button class="season-select-btn" onclick="selectSeason('${anime.id}', '${sNum}')">📦 Season ${sNum}</button>`).join('')
+        : `<div style="color:#666; text-align:center;">No seasons available</div>`;
+
+    // === 4. أزرار التحكم السفلية (Watch Now, Seasons, Download) ===
+    modalBodyHTML += `
+        <div class="video-functions">
+            <button class="btn watch-btn" onclick="window.open('${links?.watch || '#'}', '_blank')">▶ Watch Now</button>
+            <button class="btn seasons-btn" onclick="toggleDropdown('seasons-${anime.id}')">📦 Seasons</button>
+            <button class="btn download-btn" onclick="window.open('${links?.download || '#'}', '_blank')">⬇ Download</button>
+        </div>
+
+        <!-- القوائم المنبثقة للحلقات -->
+        <div class="seasons-dropdown" id="seasons-${anime.id}">
+            <div style="text-align:center; font-weight:bold; border-bottom:1px solid #333; padding-bottom:10px; margin-bottom:10px;">📦 Choose Season</div>
+            ${seasonsBtnsHTML}
+        </div>
+
+        <div class="episodes-panel" id="episodes-panel-${anime.id}">
+            <div class="episodes-panel-header" id="episodes-panel-header-${anime.id}" style="text-align:center; font-weight:bold; border-bottom:1px solid #333; padding-bottom:10px; margin-bottom:10px;">Select a Season</div>
+            <div class="episodes-panel-list" id="episodes-panel-list-${anime.id}">
+                <div style="color:#666; text-align:center; padding:20px;">Please select a season from the dropdown.</div>
+            </div>
+        </div>
+        
+        <div class="overlay-close" id="overlay-${anime.id}" onclick="closeDropdowns('${anime.id}')"></div>
+    `;
+    
+    // حقن الكود داخل النافذة
+    document.getElementById('modalBody').innerHTML = modalBodyHTML;
+    animeModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+/* =======================================================
+   نهاية التعديل
+   ======================================================= */
+
+function getClassificationClass(classification) {
+    const value = String(classification || '').trim();
+    if (value.includes('7')) return 'classification-7';
+    if (value.includes('12')) return 'classification-12';
+    if (value.includes('20')) return 'classification-20';
+    if (value.includes('16')) return 'classification-16';
+    if (value.includes('18')) return 'classification-18';
+    return 'classification-default';
+}
+
+function closeAnime() {
+    animeModal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+
+    const modalBody = document.getElementById('modalBody');
+    if (modalBody) {
+        modalBody.innerHTML = ''; 
+    }
+}
+
+searchInput.addEventListener('input', function(e) {
+    const term = e.target.value.trim().toLowerCase();
+    let visibleCount = 0;
+    document.querySelectorAll('.anime-card').forEach(card => {
+        const searchData = card.getAttribute('data-search').toLowerCase();
+        if (searchData.includes(term)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+});
+
+animeModal.addEventListener('click', function(e) {
+    if (e.target === animeModal) closeAnime();
+});
+
+function toggleFilterDropdown() {
+    const dropdown = document.getElementById('filterDropdown');
+    dropdown.classList.toggle('active');
+    const btn = document.getElementById('filterToggleBtn');
+    if (dropdown.classList.contains('active')) {
+        btn.style.transform = 'rotate(90deg)';
+        btn.style.boxShadow = '0 0 25px rgba(255, 71, 87, 0.6)';
+    } else {
+        btn.style.transform = 'rotate(0deg)';
+        btn.style.boxShadow = '0 4px 10px rgba(255, 71, 87, 0.3)';
+    }
+}
+
+document.addEventListener('click', function(e) {
+    const container = document.querySelector('.search-container');
+    const dropdown = document.getElementById('filterDropdown');
+    const btn = document.getElementById('filterToggleBtn');
+    if (!container) return;
+    if (dropdown.classList.contains('active') && !container.contains(e.target)) {
+        dropdown.classList.remove('active');
+        btn.style.transform = 'rotate(0deg)';
+        btn.style.boxShadow = '0 4px 10px rgba(255, 71, 87, 0.3)';
+    }
+});
+
+function filterCategory(type) {
+    document.getElementById('filterDropdown').classList.remove('active');
+    const cards = document.querySelectorAll('.anime-card');
+    let visibleCount = 0;
+    const noResults = document.getElementById('no-results');
+    let favorites = JSON.parse(localStorage.getItem('animeFavorites')) || [];
+    let watchLaterList = JSON.parse(localStorage.getItem('animeWatchLater')) || [];
+
+    if (type === 'Show All') {
+        cards.forEach(card => {
+            card.classList.remove('hidden');
+            visibleCount++;
+        });
+        noResults.style.display = 'none';
+        return;
+    }
+
+    if (type === 'Favorites') {
+        cards.forEach(card => {
+            const heartBtn = card.querySelector('.favorite-btn');
+            if (heartBtn && heartBtn.classList.contains('active')) {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+            noResults.textContent = '💔 You haven\'t added any anime to favorites yet!';
+        } else {
+            noResults.style.display = 'none';
+        }
+        return;
+    }
+
+    if (type === 'Watch Later') {
+        cards.forEach(card => {
+            const viewBtn = card.querySelector('.btn-view');
+            if (viewBtn) {
+                const onclickAttr = viewBtn.getAttribute('onclick');
+                const idMatch = onclickAttr.match(/'([^']+)'/);
+                if (idMatch && idMatch[1]) {
+                    const animeId = idMatch[1];
+                    if (watchLaterList.includes(animeId)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            }
+        });
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+            noResults.textContent = '📺 You haven\'t added any anime to "Watch Later" yet!';
+        } else {
+            noResults.style.display = 'none';
+        }
+        return;
+    }
+
+    cards.forEach(card => {
+        const searchData = card.getAttribute('data-search') || '';
+        if (searchData.includes(type)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+
+    if (visibleCount === 0) {
+        noResults.style.display = 'block';
+        noResults.textContent = `Sorry, no anime of type "${type}" currently available! 😅`;
+    } else {
+        noResults.style.display = 'none';
+    }
+}
+
+function toggleDropdown(showId) {
+    const dropdown = document.getElementById(showId);
+    if (!dropdown) return;
+    
+    const animeId = showId.split('-')[1];
+    document.querySelectorAll(`.seasons-dropdown[id*="${animeId}"]`).forEach(el => {
+        if(el.id !== showId) el.classList.remove('active');
+    });
+
+    dropdown.classList.toggle('active');
+    
+    const overlay = document.getElementById(`overlay-${animeId}`);
+    if (overlay) overlay.classList.toggle('active');
+}
+
+function closeDropdowns(animeId) {
+    document.getElementById('episodes-' + animeId)?.classList.remove('active');
+    document.getElementById('seasons-' + animeId)?.classList.remove('active');
+    document.getElementById('overlay-' + animeId)?.classList.remove('active');
+}
+function selectSeason(animeId, seasonNum) {
+    const seasonDropdown = document.getElementById(`seasons-${animeId}`);
+    if(seasonDropdown) seasonDropdown.classList.remove('active');
+
+    const anime = animeData.find(a => a.id === animeId);
+    if (!anime) return;
+    const links = animeLinks[animeId];
+    
+    let seasonEpisodes = [];
+    if (links && links.episodes && links.episodes[seasonNum]) {
+        seasonEpisodes = links.episodes[seasonNum];
+    }
+
+    const panel = document.getElementById(`episodes-panel-${animeId}`);
+    const header = document.getElementById(`episodes-panel-header-${animeId}`);
+    const list = document.getElementById(`episodes-panel-list-${animeId}`);
+
+    if (panel && header && list) {
+        header.textContent = `📺 Season ${seasonNum}`;
+
+        list.innerHTML = '';
+        if (seasonEpisodes && seasonEpisodes.length > 0) {
+            seasonEpisodes.forEach((url, index) => {
+                if(url && url.trim() !== '') {
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.target = '_blank';
+                    a.textContent = `🎬 Episode ${index + 1}`;
+                    list.appendChild(a);
+                }
+            });
+        } else {
+            list.innerHTML = `<div style="color:#94a3b8; text-align:center; padding: 20px;">No episodes available for this season.</div>`;
+        }
+
+        panel.style.display = 'flex';
+    }
+
+    const overlay = document.getElementById(`overlay-${animeId}`);
+    if (overlay) overlay.classList.remove('active');
+}
+function toggleFavorite(animeId, btnElement) {
+    let favorites = JSON.parse(localStorage.getItem('animeFavorites')) || [];
+    if (favorites.includes(animeId)) {
+        favorites = favorites.filter(id => id !== animeId);
+        btnElement.innerHTML = '🤍';
+        btnElement.classList.remove('active');
+    } else {
+        favorites.push(animeId);
+        btnElement.innerHTML = '❤️';
+        btnElement.classList.add('active');
+    }
+    localStorage.setItem('animeFavorites', JSON.stringify(favorites));
+}
+
+function toggleWatchLater(animeId, btnElement) {
+    let watchLaterList = JSON.parse(localStorage.getItem('animeWatchLater')) || [];
+    if (watchLaterList.includes(animeId)) {
+        watchLaterList = watchLaterList.filter(id => id !== animeId);
+        btnElement.innerHTML = '📺 Watch Later';
+        btnElement.classList.remove('active');
+    } else {
+        watchLaterList.push(animeId);
+        btnElement.innerHTML = '⭐ Watch Later';
+        btnElement.classList.add('active');
+    }
+    localStorage.setItem('animeWatchLater', JSON.stringify(watchLaterList));
+}
+
+renderAnimeCards(animeData);
+updateStats();
+
+
+// دالة لتبديل الفيديو عند الضغط على الأزرار
+function switchVideo(btnElement, newUrl) {
+    const parentContainer = btnElement.closest('.video-tab-container');
+    parentContainer.querySelectorAll('.video-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    btnElement.classList.add('active');
+
+    const videoContainer = document.getElementById('activeVideoContainer');
+    if (videoContainer) {
+        const videoTag = videoContainer.querySelector('video');
+        if (videoTag) {
+            videoTag.src = newUrl;
+            videoTag.play().catch(() => {}); 
+        }
+    }
+}
