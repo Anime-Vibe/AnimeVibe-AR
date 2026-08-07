@@ -40,8 +40,6 @@ let animeData = [
         genres: ['Action', 'Demons', 'Supernatural'],
         fullStory: [{ type: 'text', content: 'قصة يوجي إيتادوري الذي يبتلع إصبع الملك سوكونا الملعون، وينضم إلى مدرسة جوجوتسو لمحاربة اللعنات.' }]
     },
-
-
     
     {
         id: 'aot',
@@ -61,8 +59,6 @@ let animeData = [
         genres: ['Action', 'Mystery', 'Drama'],
         fullStory: [{ type: 'text', content: 'البشرية محصورة خلف جدران ضخمة لحمايتهم من العمالقة، إلى أن يتم كشف الحقيقة المروعة وراء هذه الجدران.' }]
     },
-
-
     
     {
         id: 'sl',
@@ -82,17 +78,14 @@ let animeData = [
         genres: ['Action', 'Fantasy'],
         fullStory: [{ type: 'text', content: 'أضعف صياد في العالم يحصل على نظام فريد يسمح له بالارتقاء في المستوى ويصبح الأقوى.' }]
     },
-
-
-
     {
         id: 'dn',
         title: 'Death Note',
         searchName: 'death note',
         img: 'https://cdn.myanimelist.net/images/anime/9/9453.jpg',
          video: [
-        { label: 'Trailer', url: 'Video/Deathnote.1.mp4' },
-        { label: 'حرق', url: 'Video/Deathnote.2.mp4' },
+        { label: 'Trailer', url: 'Video/Death note.1.mp4' },
+        { label: 'حرق', url: 'Video/Death note.2.mp4' },
     ],
         releaseYear: '2006 - 2007',
         episodes: '37 Episodes',
@@ -102,9 +95,6 @@ let animeData = [
         genres: ['Mystery', 'Psychological', 'Thriller'],
         fullStory: [{ type: 'text', content: 'طالب عبقري يجد دفتر ملاحظات يقتل أي شخص يُكتب اسمه فيه، مما يؤدي إلى معركة ذكاء مع المحقق إل.' }]
     },
-
-
-
     {
         id: 'ds',
         title: 'Demon Slayer',
@@ -122,9 +112,6 @@ let animeData = [
         genres: ['Action', 'Demons'],
         fullStory: [{ type: 'text', content: 'تانجيرو ينضم إلى فرقة صيادي الشياطين ليعيد أخته نيزوكو التي تحولت إلى شيطان إلى إنسان.' }]
     },
-
-
-
     {
         id: 'haikyuu',
         title: 'Haikyuu!!',
@@ -143,9 +130,6 @@ let animeData = [
         fullStory: [{ type: 'text', content: 'هيناتا وكاجيما يقودان فريق كرة الطائرة في مدرسة كاراسونو إلى قمة البطولات الوطنية.' }]
     },
   
-
-
-
     { id: 'csm',
      title: 'Chainsaw Man',
       searchName: 'chainsaw man',
@@ -154,18 +138,14 @@ let animeData = [
         { label: 'Trailer', url: 'Video/Chainsaw.1.mp4' },
         { label: 'حرق', url: 'Video/Chainsaw.2.mp4' },
     ],
-     releaseYear: '2022',
-     episodes: '12 Episodes',
-     seasons: '1 Season',
-     rating: '8.5',
-     studio: 'MAPPA',
-     genres: ['Action', 'Demons', 'Gore'],
-     fullStory: [{ type: 'text', content: 'دينجي يندمج مع شيطان المنشار الخاص به ليصبح صياد شياطين يعمل لصالح الحكومة.' }]
- },
-
-
-
-
+        releaseYear: '2022',
+         episodes: '12 Episodes',
+          seasons: '1 Season',
+           rating: '8.5',
+            studio: 'MAPPA',
+             genres: ['Action', 'Demons', 'Gore'],
+              fullStory: [{ type: 'text', content: 'دينجي يندمج مع شيطان المنشار الخاص به ليصبح صياد شياطين يعمل لصالح الحكومة.' }]
+             },
     { id: 'spyxfamily',
      title: 'Spy x Family',
       searchName: 'spy x family',
@@ -174,18 +154,14 @@ let animeData = [
         { label: 'Trailer', url: 'Video/Spy x Family.1.mp4' },
         { label: 'حرق', url: 'Video/Spy x Family.2.mp4' },
     ],
-      releaseYear: '2022 - Ongoing',
-      episodes: '37+ Episodes',
-      seasons: '2 Seasons',
-      rating: '8.5',
-      studio: 'WIT / CloverWorks',
-      genres: ['Comedy', 'Action', 'Spy'],
-      fullStory: [{ type: 'text', content: 'جاسوس يجب أن يشكل عائلة مزيفة مكونة من قاتلة محترفة وطفلة تليباتية لإكمال مهمته.' }]
-    },
-
-
-
-
+        releaseYear: '2022 - Ongoing',
+         episodes: '37+ Episodes',
+          seasons: '2 Seasons',
+           rating: '8.5',
+            studio: 'WIT / CloverWorks',
+             genres: ['Comedy', 'Action', 'Spy'],
+              fullStory: [{ type: 'text', content: 'جاسوس يجب أن يشكل عائلة مزيفة مكونة من قاتلة محترفة وطفلة تليباتية لإكمال مهمته.' }]
+             },
     { id: 'mha',
      title: 'My Hero Academia',
       searchName: 'my hero academia boku no hero',
@@ -194,18 +170,14 @@ let animeData = [
         { label: 'Trailer', url: 'Video/My Hero Academia.1.mp4' },
         { label: 'حرق', url: 'Video/My Hero Academia.2.mp4' },
     ],
-     releaseYear: '2016 - 2025',
-     episodes: '170+ Episodes',
-     seasons: '7 Seasons',
-     rating: '7.9',
-     studio: 'Bones',
-     genres: ['Action', 'School', 'Superpowers'],
-     fullStory: [{ type: 'text', content: 'إيزوكو ميدوريا يولد بدون قوة خارقة في عالم مليء بالأبطال، لكنه يرث قوة أعظم بطل "أول مايت" ليصبح بطلاً.' }] 
-     },
-
-
-
-
+        releaseYear: '2016 - 2025',
+         episodes: '170+ Episodes',
+          seasons: '7 Seasons',
+           rating: '7.9',
+            studio: 'Bones',
+             genres: ['Action', 'School', 'Superpowers'],
+              fullStory: [{ type: 'text', content: 'إيزوكو ميدوريا يولد بدون قوة خارقة في عالم مليء بالأبطال، لكنه يرث قوة أعظم بطل "أول مايت" ليصبح بطلاً.' }] 
+            },
     { id: 'tokyorev',
      title: 'Tokyo Revengers',
       searchName: 'tokyo revengers',
@@ -214,17 +186,14 @@ let animeData = [
         { label: 'Trailer', url: 'Video/Tokyo Revengers.1.mp4' },
         { label: 'حرق', url: 'Video/Tokyo Revengers.2.mp4' },
     ],
-     releaseYear: '2021 - 2023',
-     episodes: '50 Episodes',
-     seasons: '3 Seasons',
-     rating: '7.5',
-     studio: 'Liden Films',
-     genres: ['Action', 'Drama', 'Sci-Fi'],
-     fullStory: [{ type: 'text', content: 'تاكيميتشي يسافر عبر الزمن لإنقاذ حبيبته السابقة من عصابة طوكيو مانجي الخطيرة.' }]
-     },
-
-
-
+        releaseYear: '2021 - 2023',
+         episodes: '50 Episodes',
+          seasons: '3 Seasons',
+           rating: '7.5',
+            studio: 'Liden Films',
+             genres: ['Action', 'Drama', 'Sci-Fi'],
+              fullStory: [{ type: 'text', content: 'تاكيميتشي يسافر عبر الزمن لإنقاذ حبيبته السابقة من عصابة طوكيو مانجي الخطيرة.' }]
+             },
     { id: 'bluelock',
      title: 'Blue Lock',
       searchName: 'blue lock',
@@ -233,17 +202,14 @@ let animeData = [
         { label: 'Trailer', url: 'Video/Blue Lock.1.mp4' },
         { label: 'حرق', url: 'Video/Blue Lock.2.mp4' },
     ],
-    releaseYear: '2022 - Ongoing',
-    episodes: '24+ Episodes',
-    seasons: '2 Seasons',
-    rating: '8.2',
-    studio: '8bit',
-    genres: ['Sports', 'Thriller'],
-    fullStory: [{ type: 'text', content: 'مشروع تدريب سري يهدف إلى صنع مهاجم أناني للغاية ليكون أعظم هداف في تاريخ كرة القدم اليابانية.' }]
-    },
-
-
-
+        releaseYear: '2022 - Ongoing',
+         episodes: '24+ Episodes',
+          seasons: '2 Seasons',
+           rating: '8.2',
+            studio: '8bit',
+             genres: ['Sports', 'Thriller'],
+              fullStory: [{ type: 'text', content: 'مشروع تدريب سري يهدف إلى صنع مهاجم أناني للغاية ليكون أعظم هداف في تاريخ كرة القدم اليابانية.' }]
+             },
     { id: 'vinland',
      title: 'Vinland Saga',
       searchName: 'vinland saga',
@@ -252,17 +218,14 @@ let animeData = [
         { label: 'Trailer', url: 'Video/Vinland Saga.1.mp4' },
         { label: 'حرق', url: 'Video/Vinland Saga.2.mp4' },
     ],
-     releaseYear: '2019 - 2023',
-     episodes: '48 Episodes',
-     seasons: '2 Seasons',
-     rating: '8.8',
-     studio: 'WIT / MAPPA',
-     genres: ['Action', 'Historical', 'Drama'],
-     fullStory: [{ type: 'text', content: 'ثورفين، الفايكينج الشاب، يسعى للانتقام لمقتل والده قبل أن يكتشف المعنى الحقيقي للسلام.' }] 
-    },
-
-
-
+        releaseYear: '2019 - 2023',
+         episodes: '48 Episodes',
+          seasons: '2 Seasons',
+           rating: '8.8',
+            studio: 'WIT / MAPPA',
+             genres: ['Action', 'Historical', 'Drama'],
+              fullStory: [{ type: 'text', content: 'ثورفين، الفايكينج الشاب، يسعى للانتقام لمقتل والده قبل أن يكتشف المعنى الحقيقي للسلام.' }] 
+            },
     { id: 'opm',
      title: 'One Punch Man',
       searchName: 'one punch man',
@@ -271,17 +234,15 @@ let animeData = [
         { label: 'Trailer', url: 'Video/One Punch Man.1.mp4' },
         { label: 'حرق', url: 'Video/One Punch Man.2.mp4' },
     ],
-    releaseYear: '2015 - 2019',
-    episodes: '24 Episodes',
-    seasons: '2 Seasons',
-    rating: '8.5',
-    studio: 'Madhouse / J.C.Staff',
-    genres: ['Action', 'Comedy', 'Parody'],
-    fullStory: [{ type: 'text', content: 'سايتاما، البطل الذي يهزم أي خصم بلكمة واحدة، يعاني من الملل بسبب قوته المطلقة.' }] 
-     },
+        releaseYear: '2015 - 2019',
+         episodes: '24 Episodes',
+          seasons: '2 Seasons',
+           rating: '8.5',
+            studio: 'Madhouse / J.C.Staff',
+             genres: ['Action', 'Comedy', 'Parody'],
+              fullStory: [{ type: 'text', content: 'سايتاما، البطل الذي يهزم أي خصم بلكمة واحدة، يعاني من الملل بسبب قوته المطلقة.' }] 
+            },
  
-
-
     { id: 'fma',
      title: 'Fullmetal Alchemist: Brotherhood',
       searchName: 'fullmetal alchemist brotherhood',
@@ -289,17 +250,14 @@ let animeData = [
        video: [
         { label: 'Trailer', url: 'Video/Fullmetal Alchemist.2.mp4' },
     ],
-    releaseYear: '2009 - 2010',
-    episodes: '64 Episodes',
-    seasons: '1 Season',
-    rating: '9.1',
-    studio: 'Bones',
-    genres: ['Action', 'Adventure', 'Fantasy'],
-    fullStory: [{ type: 'text', content: 'الأخوان إلريك يبحثان عن حجر الفيلسوف لاستعادة جسديهما بعد محاولة خيمياء فاشلة.' }]
-    },
-
-
-
+        releaseYear: '2009 - 2010',
+         episodes: '64 Episodes',
+          seasons: '1 Season',
+           rating: '9.1',
+            studio: 'Bones',
+             genres: ['Action', 'Adventure', 'Fantasy'],
+              fullStory: [{ type: 'text', content: 'الأخوان إلريك يبحثان عن حجر الفيلسوف لاستعادة جسديهما بعد محاولة خيمياء فاشلة.' }]
+             },
     { id: 'cyberpunk',
      title: 'Cyberpunk: Edgerunners',
       searchName: 'cyberpunk edgerunners',
@@ -308,36 +266,30 @@ let animeData = [
         { label: 'Trailer', url: 'Video/Cyberpunk.1.mp4' },
         { label: 'حرق', url: 'Video/Cyberpunk.2.mp4' },
     ],
-    releaseYear: '2022',
-    episodes: '10 Episodes',
-    seasons: '1 Season',
-    rating: '8.6',
-    studio: 'Trigger',
-    genres: ['Action', 'Sci-Fi', 'Tragedy'],
-    fullStory: [{ type: 'text', content: 'ديفيد مارتينيز يعيش في مدينة مستقبلية ويسعى ليصبح مرتزقًا محترفًا.' }] 
-    },
-
-
-
+       releaseYear: '2022',
+        episodes: '10 Episodes',
+         seasons: '1 Season',
+          rating: '8.6',
+           studio: 'Trigger',
+            genres: ['Action', 'Sci-Fi', 'Tragedy'],
+             fullStory: [{ type: 'text', content: 'ديفيد مارتينيز يعيش في مدينة مستقبلية ويسعى ليصبح مرتزقًا محترفًا.' }] 
+            },
     { id: 'drstone',
-    title: 'Dr. Stone',
-    searchName: 'dr stone',
-    img: 'https://cdn.myanimelist.net/images/anime/1613/102576.jpg',
-    video: [
+     title: 'Dr. Stone',
+      searchName: 'dr stone',
+       img: 'https://cdn.myanimelist.net/images/anime/1613/102576.jpg',
+         video: [
         { label: 'Trailer', url: 'Video/Dr. Stone.1.mp4' },
         { label: 'حرق', url: 'Video/Dr. Stone.2.mp4' },
     ],
-      releaseYear: '2019 - 2023',
-     episodes: '35+ Episodes',
-     seasons: '3 Seasons',
-      rating: '8.2',
-     studio: 'TMS Entertainment',
-     genres: ['Sci-Fi', 'Adventure'],
-     fullStory: [{ type: 'text', content: 'العبقري سينكو يستيقظ بعد آلاف السنين ليجد البشرية تحولت إلى حجر، ويقرر إعادة بناء الحضارة بالعلم.' }] 
-     },
-
-
-
+        releaseYear: '2019 - 2023',
+         episodes: '35+ Episodes',
+          seasons: '3 Seasons',
+           rating: '8.2',
+            studio: 'TMS Entertainment',
+             genres: ['Sci-Fi', 'Adventure'],
+              fullStory: [{ type: 'text', content: 'العبقري سينكو يستيقظ بعد آلاف السنين ليجد البشرية تحولت إلى حجر، ويقرر إعادة بناء الحضارة بالعلم.' }] 
+            },
     { id: 'parasyte',
      title: 'Parasyte: The Maxim',
       searchName: 'parasyte kiseijuu',
@@ -505,10 +457,10 @@ let animeData = [
     studio: "Ufotable",
     genres: ['Action', 'Supernatural', 'Drama', 'Adventure'],
     fullStory: [{ 
-        type: 'text',content: "تانجيرو وفريقه ينطلقون في مهمة جديدة على قطار موغن، حيث يواجهون شيطاناً قوياً يهدد حياة الركاب." }]
+        type: 'text',
+        content: "تانجيرو وفريقه ينطلقون في مهمة جديدة على قطار موغن، حيث يواجهون شيطاناً قوياً يهدد حياة الركاب." 
+    }]
 },
-
-
 {
     id: 'demon-slayer-infinity-castle',
     title: "Demon Slayer: Infinity Castle",
@@ -526,11 +478,10 @@ let animeData = [
     studio: "Ufotable",
     genres: ['Action', 'Supernatural', 'Drama', 'Adventure', 'Fantasy'],
     fullStory: [{ 
-        type: 'text',content: "الجزء الأول من ثلاثية الأفلام الختامية لسلسلة قاتل الشياطين. يجد الفيلق أنفسهم محاصرين داخل قلعة اللانهاية، حيث يواجه تانجيرو والهاشيرا أقوى الشياطين في معركة حاسمة ضد موزان كيبوتسوجي واثني عشر كيزوكي."  }]
+        type: 'text',
+        content: "الجزء الأول من ثلاثية الأفلام الختامية لسلسلة قاتل الشياطين. يجد الفيلق أنفسهم محاصرين داخل قلعة اللانهاية، حيث يواجه تانجيرو والهاشيرا أقوى الشياطين في معركة حاسمة ضد موزان كيبوتسوجي واثني عشر كيزوكي." 
+    }]
 },
-
-
-
 {
     id: 'suzume',
     title: "Suzume",
@@ -552,8 +503,6 @@ let animeData = [
         content: "في رحلة عبر اليابان، تلتقي سوزومي بصبي غامض يحاول إغلاق أبواب الزمان والمكان لمنع الكوارث الطبيعية. تنضم إليه في مهمة خطيرة لاكتشاف معنى الحياة والذاكرة." 
     }]
 },
-
-
 {
     id: 'maquia',
     title: "Maquia: When the Promised Flower Blooms",
@@ -575,8 +524,6 @@ let animeData = [
         content: "ماكيا، فتاة من قبيلة تعيش لقرون، تعيش حياة هادئة حتى يغزو جيش مملكتهم. في الفوضى، تجد طفلاً وتقرر تربيته كابن لها، في قصة مؤثرة عن الأمومة والزمن والفراق." 
     }]
 },
-
-
     {
     id: 'gintama-the-final',
     title: "Gintama: The Final",
@@ -595,8 +542,6 @@ let animeData = [
     genres: ['Comedy', 'Action', 'Sci-Fi', 'Drama'],
     fullStory: [{ type: 'text', content: "الفيلم الأخير لسلسلة جينتاما، حيث يواجه جينتوكي وأصدقاؤه التهديد الأخير لوجودهم، في خاتمة ملحمية تمزج بين الكوميديا الرائعة والإثارة." }]
 },
-
-
 {
     id: 'violet-evergarden-movie',
     title: "Violet Evergarden: The Movie",
@@ -615,9 +560,214 @@ let animeData = [
     genres: ['Drama', 'Romance', 'Fantasy', 'Psychological'],
     fullStory: [{ type: 'text', content: "استمرار لقصة فايوليت، دمية الذاكرة الآلية التي تكتب الرسائل للآخرين. في هذا الفيلم، تواجه ماضيها وتشرع في رحلة للعثور على معنى الحب والأمل." }]
 },
+{
+    id: 'dragon-ball-super-broly',
+    title: "Dragon Ball Super: Broly",
+    searchName: "dragon ball super broly",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnB0mgAfOhz4r0bp3Qhgx5wvR2n5QWSEgvLmU8jL7AGw&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/Dragon Ball Super.1.mp4' },
+     
+    ],
+    releaseYear: '2018',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '8.42',
+    studio: "Toei Animation",
+    genres: ['Action', 'Sci-Fi', 'Adventure', 'Drama'],
+    fullStory: [{ type: 'text', content: "غوكو وفيجيتا يواجهان أقوى خصم في تاريخ السايان، برولي، في معركة ملحمية تعيد تعريف القوة في عالم دراغون بول." }]
+},
 
 
- 
+
+{
+    id: 'made-in-abyss-dawn-deep-soul',
+    title: "Made in Abyss: Dawn of the Deep Soul",
+    searchName: "made in abyss dawn of the deep soul",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtWeWvy-LjIvra77GXML2x0Djoevy9SDmBlKvfH84B6g&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/Made in Abyss.1.mp4' },
+        { label: 'حرق', url: 'Video/' },
+    ],
+    releaseYear: '2020',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+18',
+    rating: '8.63',
+    studio: "Kinema Citrus",
+    genres: ['Adventure', 'Drama', 'Fantasy', 'Psychological Horror'],
+    fullStory: [{ type: 'text', content: "رحلة ريكو وريج تستمر في الهاوية، حيث يواجهون أهوالاً واكتشافات مرعبة جديدة حول طبيعة الهاوية وعلاقتها بالبشرية." }]
+},
+
+
+
+
+{
+    id: 'the-boy-and-the-beast',
+    title: "The Boy and the Beast",
+    searchName: "the boy and the beast bakemono no ko",
+    img: 'https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/3b624448199a3efbcb0d35e1a265fb94.jpe',
+      video: [
+        { label: 'Trailer', url: 'Video/The Boy and the Beast.1.mp4' },
+        
+    ],
+    releaseYear: '2015',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '8.00',
+    studio: "Studio Chizu",
+    genres: ['Adventure', 'Fantasy', 'Drama', 'Action'],
+    fullStory: [{ type: 'text', content: "صبي ضائع في العالم البشري يتيه في عالم الوحوش، حيث يصبح متدرباً لمحارب وحش غاضب. تتطور علاقتهما من خلال التدريب والصداقة في مغامرة عن العائلة والانتماء." }]
+},
+
+
+
+
+{
+    id: 'the-anthem-of-the-heart',
+    title: "The Anthem of the Heart",
+    searchName: "the anthem of the heart kokoro ga sakebitagatterunda",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw2ZpnRljAol5VC44qTZMg9mRBFKzPC6AdZwyQZdS6DA&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/The Anthem of the Heart.1.mp4' },
+   
+    ],
+    releaseYear: '2015',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '7.85',
+    studio: "A-1 Pictures",
+    genres: ['Drama', 'Romance', 'School', 'Music'],
+    fullStory: [{ type: 'text', content: "فتاة تعاني من صدمة نفسية بعد كلمات قاسية من والدها وتفقد القدرة على الكلام. عندما يُطلب منها المشاركة في مسرحية موسيقية، تجد طريقة للتعبير عن مشاعرها المكبوتة من خلال الغناء." }]
+},
+
+
+
+{
+    id: 'the-boy-and-the-heron',
+    title: "The Boy and the Heron",
+    searchName: "the boy and the heron kimi-tachi wa dou ikiru ka",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-YnMZN2U3jZwIA9rL2Xa1h9cBBZoEctaFZlAD-Zm48A&s',
+      video: [
+        { label: 'Trailer', url: 'Video/The Boy.1.mp4' },
+       
+    ],
+    releaseYear: '2023',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '8.4',
+    studio: "Studio Ghibli",
+    genres: ['Adventure', 'Drama', 'Fantasy', 'Mystery'],
+    fullStory: [{ type: 'text', content: "بعد وفاة والدته، ينتقل الشاب ماهيتو إلى منزل عائلته الريفي. تقوده أحداث غامضة إلى برج قديم، حيث يعيش مالك الحزين الحزين. عندما تختفي زوجة أبيه، يتبعه إلى عالم غامض يطمس الحدود بين الأحياء والأموات، في رحلة لكشف الأسرار وفهم نفسه." }]
+},
+
+
+
+{
+    id: 'baki-vs-kengan',
+    title: "Baki Hanma vs Kengan Ashura",
+    searchName: "baki hanma vs kengan ashura",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtAVDh5s05w3SSv4Bm4ssGQkfIZG1PTzpUsCoMot22w&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/Baki Hanma vs.1.mp4' },
+        
+    ],
+    releaseYear: '2024',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+18',
+    rating: '5.7',
+    studio: "TMS Entertainment",
+    genres: ['Action', 'Martial Arts', 'Sports', 'Drama'],
+    fullStory: [{ type: 'text', content: "معركة غير مسبوقة تجمع أقوى المقاتلين من عالمين مختلفين، حيث يتواجه باكي هانما وتوكيتا أوما في مباراة مثيرة لتحديد من هو الأقوى حقاً." }]
+},
+
+
+
+{
+    id: 'kimi-no-iro',
+    title: "Kimi no Iro",
+    searchName: "kimi no iro",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTja8utH7LiLNqPbCqs9ZPtjlkkSIY8PeIVurJFPc2y4w&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/Kimi no Iro.1.mp4' },
+        
+    ],
+    releaseYear: '2024',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '7.9',
+    studio: "Science SARU",
+    genres: ['Drama', 'Psychological', 'Music', 'Romance'],
+    fullStory: [{ type: 'text', content: "فتاة في المدرسة الثانوية تمتلك قدرة غريبة على رؤية مشاعر الناس كألوان. هذه القدرة تجعلها تضع مشاعر الآخرين قبل مشاعرها، حتى تلتقي بأشخاص يساعدونها في العثور على الأمل وفهم نفسها." }]
+}, 
+
+
+
+
+{
+    id: 'your-name',
+    title: "Your Name",
+    searchName: "your name kimi no na wa",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNOqgdVJcVbaz3MwvdGWbyjKZq1NmqbBmMzD8_aeDwdg&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/Your Name.1.mp4' },
+        
+    ],
+    releaseYear: '2016',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '8.84',
+    studio: "CoMix Wave Films",
+    genres: ['Romance', 'Sci-Fi', 'Drama', 'Adventure'],
+    fullStory: [{ type: 'text', content: "مراهقان يعيشان في مدينتين مختلفتين يكتشفان أنهما يتبادلان الأجساد بشكل غامض، وتتطور علاقتهما عبر الزمن لمواجهة قدر يهدد أحدهما." }]
+},
+
+{
+    id: 'spirited-away',
+    title: "Spirited Away",
+    searchName: "spirited away sen to chihiro no kamikakushi",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSINJHZKscWPPgIL0sTcPF6pnqcLODb2g1jLHgS_qmfOw&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/Spirited Away.1.mp4' },
+        
+    ],
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '8.78',
+    studio: "Studio Ghibli",
+    genres: ['Adventure', 'Fantasy', 'Drama', 'Family'],
+    fullStory: [{ type: 'text', content: "أثناء انتقال عائلتها إلى منزل جديد، تدخل شيهيرو البالغة من العمر 10 سنوات عالماً يسكنه الآلهة والسحرة والأرواح. يتحول والداها إلى خنازير، وعليها العمل في حمام للأرواح لإيجاد طريقة لإنقاذهم والعودة إلى عالمها." }]
+},
+
+
+
+{
+    id: 'one-piece-film-red',
+    title: "One Piece Film: Red",
+    searchName: "one piece film red",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqnknBuF4jj9r1ijMbkpTC0-MQaAp7fMLVl6XNh68upw&s=10',
+      video: [
+        { label: 'Trailer', url: 'Video/One Piece Red.1.mp4' },
+        
+    ],
+    releaseYear: '2022',
+    episodes: 'Movie',
+    seasons: '1 Movie',
+    classification: '+13',
+    rating: '8.03',
+    studio: "Toei Animation",
+    genres: ['Action', 'Adventure', 'Music', 'Comedy'],
+    fullStory: [{ type: 'text', content: "المغنية الأسطورية أوتا تصعد على المسرح لأول مرة أمام الجمهور. يكتشف لوفي وطاقمه أن أوتا هي ابنة شانكس، وتتكشف الأحداث في مغامرة موسيقية مثيرة." }]
+},
+
 
  { id: 'assassination',
      title: 'Assassination Classroom',
@@ -635,9 +785,6 @@ let animeData = [
              genres: ['Action', 'Comedy', 'School'],
               fullStory: [{ type: 'text', content: 'مخلوق قوي يهدد بتدمير الأرض، لكنه يوافق على تدريس الفصل 3-E بشرط أن يحاول الطلاب قتله.' }] 
             },
-
-
-
     { id: 'berserk', 
     title: 'Berserk',
      searchName: 'berserk', 
@@ -654,8 +801,6 @@ let animeData = [
          genres: ['Action', 'Horror', 'Fantasy'],
           fullStory: [{ type: 'text', content: 'محارب وحيد يحمل سيفاً ضخماً يحارب الشياطين في عالم مظلم وعنيف.' }]
          },
-
-         
     { id: 'blackclover',
      title: 'Black Clover',
       searchName: 'black clover',
