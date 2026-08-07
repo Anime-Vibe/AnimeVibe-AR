@@ -371,78 +371,113 @@ body {
 
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 30px;
+    /* هتخليها تلقائياً تقسم 5 في الكبير و 2 في الموبايل */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
 }
 
+/* --- تصميم الكارت القوي (القرد) --- */
 .anime-card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* ظل قوي جداً وناعم */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
+    /* هذا السطر يمنع الصورة من الخروج عن الإطار عند التكبير */
+    isolation: isolate;
 }
 
-.anime-card.hidden {
-    display: none !important;
+/* إطار مضيء مخفي يظهر عند التمرير */
+.anime-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 26px;
+    padding: 2px;
+    background: linear-gradient(145deg, transparent, var(--accent), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
 }
 
 .anime-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    border-color: var(--accent);
-    box-shadow: 0 20px 50px var(--accent-glow);
+    transform: translateY(-18px) scale(1.02);
+    /* رفع قيمة التوهج في الثيم الأساسي */
+    box-shadow: 0 30px 60px var(--accent-glow), 0 10px 20px rgba(0, 0, 0, 0.7);
+    border-color: transparent; /* نزيل الإطار العادي ليظهر الإطار المضيء */
 }
 
+.anime-card:hover::before {
+    opacity: 1;
+}
+
+/* تطوير شكل الصورة داخل البطاقة */
 .anime-card img {
     width: 100%;
     height: 280px;
     object-fit: cover;
     background-color: #0f111a;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 1;
+    /* تأثير خفيف عند الحواف */
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .anime-card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.08) translateY(-5px);
+    mask-image: none;
 }
 
+/* تحسين نص العنوان */
 .anime-card-body {
     position: relative;
-    padding: 20px 15px 25px 15px;
+    padding: 20px 15px 30px 15px;
     text-align: center;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%);
-    gap: 12px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 70%, transparent 100%);
+    gap: 15px;
+    margin-top: -30px; /* سحب المحتوى فوق الصورة قليلاً */
+    z-index: 2;
+    padding-top: 40px;
 }
 
 .anime-card-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 900;
     color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 0 2px 15px rgba(0,0,0,0.9);
     margin: 0;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    transform: translateY(0);
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    transform: translateY(5px);
 }
 
 .anime-card:hover .anime-card-title {
-    transform: translateY(-4px);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    color: var(--accent);
 }
 
+/* تنسيق زر القصة ليكون أكثر فخامة */
 .btn-view {
-    background: linear-gradient(135deg, #ff4757, #ff2e63);
+    background: linear-gradient(135deg, var(--card-bg), #222);
     color: #fff;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     padding: 14px 0;
     border-radius: 50px;
@@ -453,8 +488,8 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
 }
 
@@ -465,51 +500,50 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
     transform: rotate(45deg) translateX(-150%);
     transition: all 0.7s ease;
 }
 
-.btn-view:hover {
+.anime-card:hover .btn-view {
+    background: var(--accent); /* لون الثيم الأساسي */
+    border-color: var(--accent);
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 71, 87, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.2);
-    letter-spacing: 1.5px;
+    box-shadow: 0 0 30px var(--accent-glow), inset 0 0 10px rgba(255,255,255,0.2);
+    letter-spacing: 2px;
 }
 
 .btn-view:hover::after {
     transform: rotate(45deg) translateX(150%);
 }
 
-.btn-view:active {
-    transform: scale(0.95);
-    transition: 0.1s;
-}
-
+/* تعديل زر القلب ليكون أكثر وضوحاً وتميزاً */
 .favorite-btn {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 5;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .favorite-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.2) rotate(15deg);
     border-color: #ff4757;
     background: rgba(255, 71, 87, 0.2);
+    box-shadow: 0 0 25px rgba(255, 71, 87, 0.4);
 }
 
 .favorite-btn.active {
@@ -517,7 +551,7 @@ body {
     border-color: #ff4757;
     background: rgba(255, 71, 87, 0.3);
     animation: heartPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
+    box-shadow: 0 0 30px rgba(255, 71, 87, 0.5);
 }
 
 @keyframes heartPop {
@@ -537,15 +571,16 @@ body {
     padding: 40px;
 }
 
+/* =======================================================
+   تصميم النافذة المنبثقة (سينمائي - زي الصورة)
+   ======================================================= */
 .modal-overlay {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 18, 0.95);
-    z-index: 2000;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -558,218 +593,228 @@ body {
 }
 
 .modal-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    max-width: 950px;
+    background: #0a0a0f; /* خلفية سوداء فخمة */
+    border-radius: 24px;
+    max-width: 1200px;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
-    padding: 30px;
     position: relative;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    background-image: none !important;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
-.modal-card::-webkit-scrollbar {
-    width: 8px;
-    background-color: var(--card-bg);
-}
-.modal-card::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
-    border-radius: 10px;
-}
-.modal-card::-webkit-scrollbar-thumb:hover {
-    background-color: #ff2e63;
-}
-.modal-card::-webkit-scrollbar-track {
-    background-color: var(--card-bg);
-}
-.modal-card::-webkit-scrollbar-button {
-    display: none;
-}
+/* شريط التمرير المخصص للنافذة */
+.modal-card::-webkit-scrollbar { width: 8px; }
+.modal-card::-webkit-scrollbar-track { background: #181b2a; border-radius: 10px; }
+.modal-card::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
 
-/* =======================================================
-   التنسيق الجديد: الأزرار فوق، والاسم بجانب الفيديو
-   ======================================================= */
+/* === الصف العلوي (الأزرار) === */
 .modal-top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 }
 
-.modal-video-tabs-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    min-width: 150px;
+.modal-top-row .close-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
 }
+
+.modal-top-row .close-btn:hover { border-color: var(--accent); background: rgba(255,71,87,0.1); }
 
 .video-tab-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    width: 100%;
+    gap: 10px;
 }
-
 .video-tab-btn {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-muted);
-    padding: 8px 16px;
-    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #94a3b8;
+    padding: 8px 20px;
+    border-radius: 30px;
     font-family: 'Tajawal', sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    transition: 0.3s;
 }
-
-.video-tab-btn:hover {
-    transform: translateY(-2px);
-    border-color: var(--text-muted);
-    color: #fff;
-}
-
 .video-tab-btn.active {
     background: var(--accent);
     border-color: var(--accent);
     color: #fff;
-    box-shadow: 0 0 15px var(--accent-glow);
 }
 
+.watch-later-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #94a3b8;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.watch-later-btn.active { background: #fbbf24; color: #1a1a2e; border-color: #fbbf24; }
+
+/* === تقسيم المحتوى (الصورة جنب الفيديو) === */
 .modal-content-split {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 20px;
-    width: 100%;
-    align-items: stretch; /* مهم جداً لضمان أن الاسم ياخد نفس ارتفاع الفيديو */
+    margin-bottom: 25px;
+    align-items: stretch;
 }
 
+/* تعديل الجزء اليسار (الصورة) ليصبح رأسياً */
 .modal-left {
-    flex: 0 0 220px;
+    flex: 0 0 280px; /* عرض ثابت للصورة */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* يوزع المساحة بين الصورة والاسم */
-}
-
-.modal-img-wrapper {
-    width: 100%;
+    gap: 15px;
 }
 
 .modal-img-left {
     width: 100%;
-    height: auto;
     aspect-ratio: 3/4;
     object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    display: block;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* اسم الأنمي تحت الصورة، في نفس مستوى الفيديو */
+/* العنوان الرئيسي الكبير فوق القصة */
 .modal-left .modal-title-left {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 900;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--accent);
-    line-height: 1.4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-grow: 1; /* يمتد لياخد نفس ارتفاع المكان */
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.3;
 }
 
+/* القصة القصيرة تحت العنوان */
+.modal-left .anime-quick-story {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    border-left: 3px solid var(--accent);
+    padding-left: 12px;
+    margin-top: -5px;
+}
+
+/* الفيديو في اليمين */
 .modal-right {
     flex: 1;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
+    min-width: 300px;
 }
 
 .video-container-right {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: transparent;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 2px solid var(--border-color);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.video-container-right iframe, 
-.video-container-right video {
     width: 100%;
     height: 100%;
-    border: none;
-    object-fit: contain;
-    background-color: #000;
-    border-radius: 12px;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
 }
-/* =======================================================
-   نهاية التنسيق الجديد
-   ======================================================= */
+.video-container-right video {
+    width: 100%; height: 100%; object-fit: cover;
+}
 
+/* === شبكة التفاصيل === */
 .anime-meta-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 12px;
-    margin: 0 0 20px 0;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255,255,255,0.03);
     padding: 15px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    background-image: none !important;
-}
-
-.meta-item {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.meta-item strong {
-    color: #fff;
-    display: block;
-    margin-top: 2px;
-}
-
-.genres-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
     margin-bottom: 20px;
 }
+.meta-item { color: #94a3b8; font-size: 0.85rem; }
+.meta-item strong { display: block; color: #fff; margin-top: 4px; font-size: 0.95rem;}
 
+.genres-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
 .genre-tag {
-    background: rgba(255, 71, 87, 0.15);
-    color: var(--accent);
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    border: 1px solid var(--accent);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #94a3b8;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
 }
 
+/* === القصة الكاملة === */
 .story-paragraph {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    color: var(--text-main);
-    margin-bottom: 18px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 25px;
 }
+
+/* === الأزرار السفلية === */
+.video-functions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+.video-functions .btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+.btn.watch-btn { background: var(--accent); }
+.btn.seasons-btn { background: #1f2937; border: 1px solid rgba(255,255,255,0.1); }
+.btn.download-btn { background: #1f2937; border: 1px solid rgba(255,255,255,0.1); }
+.video-functions .btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
+
+/* === لوحات الحلقات === */
+.seasons-dropdown, .episodes-panel {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #181b2a;
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    max-height: 70vh;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10000;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.seasons-dropdown.active, .episodes-panel.active { display: flex; transform: translate(-50%, -50%) scale(1); }
+
+.episodes-panel-list a, .season-select-btn {
+    display: block;
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    border: 1px solid transparent;
+}
+.episodes-panel-list a:hover, .season-select-btn:hover { border-color: var(--accent); background: rgba(255,71,87,0.1); }
+.seasons-dropdown.active, .episodes-panel.active { display: flex; }
+.overlay-close.active { display: block; position: fixed; inset: 0; z-index: 9999; }
 
 .classification-7 { color: #10b981; }
 .classification-12 { color: #3b82f6; }
@@ -777,202 +822,6 @@ body {
 .classification-20 { color: #ef4444; }
 .classification-16 { color: #a855f7; }
 .classification-default { color: #e2e8f0; }
-
-.close-btn {
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-family: 'Tajawal', sans-serif;
-    font-weight: bold;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-.close-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 71, 87, 0.4);
-}
-
-.watch-later-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid #4a5568;
-    color: #a0aec0;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-family: 'Tajawal', sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-.watch-later-btn:hover {
-    transform: translateY(-2px);
-    border-color: #e2e8f0;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-}
-.watch-later-btn.active {
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
-    border-color: #f59e0b;
-    color: #1a1a2e;
-    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
-    animation: starPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes starPop {
-    0% { transform: scale(1) rotate(0deg); }
-    25% { transform: scale(1.3) rotate(15deg); }
-    50% { transform: scale(0.9) rotate(-10deg); }
-    75% { transform: scale(1.1) rotate(5deg); }
-    100% { transform: scale(1) rotate(0deg); }
-}
-
-.video-functions {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 25px;
-    position: relative;
-    width: 100%;
-}
-.video-functions .btn {
-    flex: 1;
-    min-width: 100px;
-    max-width: 220px;
-    padding: 14px 10px;
-    border: none;
-    border-radius: 30px;
-    font-family: 'Tajawal', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.btn.watch-btn { background: linear-gradient(135deg, #ff4757, #ff2e63); }
-.btn.seasons-btn { background: linear-gradient(135deg, #00d2d3, #01a3a4); }
-.btn.download-btn { background: linear-gradient(135deg, #fdcb6e, #f39c12); color: #1a1a2e; }
-.video-functions .btn:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.episodes-dropdown,
-.seasons-dropdown {
-    display: none;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #181b2a;
-    border: 1px solid #2d3748;
-    border-radius: 16px;
-    padding: 15px;
-    width: 280px;
-    max-height: 400px;
-    overflow-y: auto;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.episodes-dropdown {
-    right: 30px;
-}
-.seasons-dropdown {
-    left: 30px;
-}
-
-.episodes-dropdown.active,
-.seasons-dropdown.active {
-    display: flex;
-    animation: slideIn 0.3s ease forwards;
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(-50%) translateX(20px); }
-    to { opacity: 1; transform: translateY(-50%) translateX(0); }
-}
-
-.episodes-dropdown a,
-.seasons-dropdown a {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid transparent;
-    border-radius: 10px;
-    color: #e2e8f0;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Tajawal', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.episodes-dropdown a:hover,
-.seasons-dropdown a:hover {
-    background: rgba(255, 71, 87, 0.15);
-    border-color: #ff4757;
-    color: #fff;
-}
-
-.dropdown-title {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #94a3b8;
-    border-bottom: 1px solid #2d3748;
-    padding-bottom: 10px;
-    margin-bottom: 5px;
-}
-
-.episodes-dropdown::-webkit-scrollbar,
-.seasons-dropdown::-webkit-scrollbar {
-    width: 8px;
-}
-
-.episodes-dropdown::-webkit-scrollbar-track,
-.seasons-dropdown::-webkit-scrollbar-track {
-    background: #1f2336;
-    border-radius: 10px;
-}
-
-.episodes-dropdown::-webkit-scrollbar-thumb,
-.seasons-dropdown::-webkit-scrollbar-thumb {
-    background: #ff4757;
-    border-radius: 10px;
-}
-
-.overlay-close {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9998;
-    display: none;
-}
-
-.overlay-close.active {
-    display: block;
-}
 
 .site-footer {
     background: transparent;
@@ -1126,39 +975,30 @@ body {
         margin: 10px;
     }
 
+    /* تعديلات التجاوب للتصميم السينمائي الجديد */
     .modal-content-split {
         flex-direction: column;
     }
-    
     .modal-left {
         flex: 1;
         width: 100%;
-        max-width: 100%;
         align-items: center;
+        text-align: center;
     }
-    
-    .modal-img-wrapper {
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
+    .modal-img-left {
+        max-width: 200px;
     }
-    
-    .modal-right {
-        flex: 1;
-        width: 100%;
+    .modal-left .anime-quick-story {
+        border-left: none;
+        text-align: center;
+        padding: 0;
     }
-    
     .modal-left .modal-title-left {
-        min-height: auto;
-        padding: 10px 0;
-        margin-top: 10px;
+        font-size: 1.4rem;
+        text-align: center;
     }
-
-    .video-functions .btn {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-        min-width: 80px;
-    }
+    .video-functions { flex-direction: column; }
+    .video-functions .btn { min-width: auto; width: 100%; }
 
     .episodes-dropdown,
     .seasons-dropdown {
@@ -1223,16 +1063,6 @@ body {
 
     .story-paragraph {
         font-size: 0.95rem;
-    }
-
-    .video-functions {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .video-functions .btn {
-        width: 100%;
-        max-width: 100%;
     }
 }
 
@@ -1340,90 +1170,6 @@ body.theme-transition .hero-banner img {
     100% { opacity: 1; transform: scale(1); }
 }
 
-.episodes-panel {
-    display: none;
-    position: fixed;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-    background: #181b2a;
-    border: 1px solid #2d3748;
-    border-radius: 16px;
-    padding: 15px;
-    width: 300px;
-    max-height: 60vh;
-    overflow-y: auto;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.8);
-    z-index: 9999;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.episodes-panel-header {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #fff;
-    border-bottom: 1px solid #2d3748;
-    padding-bottom: 12px;
-    margin-bottom: 10px;
-}
-
-.episodes-panel-list a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid transparent;
-    border-radius: 8px;
-    color: #e2e8f0;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Tajawal', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    margin-bottom: 5px;
-}
-
-.episodes-panel-list a:hover {
-    background: rgba(255, 71, 87, 0.15);
-    border-color: #ff4757;
-    color: #fff;
-}
-
-.episodes-panel::-webkit-scrollbar { width: 8px; }
-.episodes-panel::-webkit-scrollbar-track { background: #1f2336; border-radius: 10px; }
-.episodes-panel::-webkit-scrollbar-thumb { background: #ff4757; border-radius: 10px; }
-
-.season-select-btn {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #2d3748;
-    color: #e2e8f0;
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    font-family: 'Tajawal', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-bottom: 5px;
-}
-.season-select-btn:hover {
-    background: rgba(255, 71, 87, 0.2);
-    color: #fff;
-}
-
-@media (max-width: 900px) {
-    .episodes-panel {
-        right: auto !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) scale(0.95) !important;
-        width: 90%;
-        max-width: 350px;
-        max-height: 70vh;
-    }
-}
-
 .theme-toggle-wrapper {
     position: fixed;
     top: 20px;
@@ -1526,7 +1272,6 @@ body.theme-transition .hero-banner img {
 }
 
 
-
 /* --- شريط التحكم في الصوت --- */
 .music-controls-box {
     position: fixed;
@@ -1625,3 +1370,5 @@ body.theme-transition .hero-banner img {
         width: 200px;
     }
 }
+
+
