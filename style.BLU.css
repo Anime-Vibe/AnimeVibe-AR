@@ -1,0 +1,24 @@
+/* --- تم التعديل: التصميم الأزرق --- */
+body.theme-blue {
+    --accent: #2196f3;
+    --accent-glow: rgba(33, 150, 243, 0.4);
+    --border-color: #2c4a6a;
+    --card-bg: #0f1a2e; /* خلفية كروت زرقاء داكنة */
+}
+
+/* تعديل الأزرار لتكون زرقاء */
+body.theme-blue .btn-view,
+body.theme-blue .filter-toggle-btn,
+body.theme-blue .close-btn {
+    background: #2196f3 !important;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4) !important;
+}
+body.theme-blue .btn-view:hover {
+    background: #42a5f5 !important;
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.6) !important;
+}
+body.theme-blue .genre-tag {
+    border-color: #2196f3;
+    color: #2196f3;
+    background: rgba(33, 150, 243, 0.15);
+}

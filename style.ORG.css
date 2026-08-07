@@ -1,0 +1,24 @@
+/* --- تم التعديل: التصميم البرتقالي --- */
+body.theme-orange {
+    --accent: #ff5722;
+    --accent-glow: rgba(255, 87, 34, 0.4);
+    --border-color: #5a3e36;
+    --card-bg: #1c1513; /* خلفية كروت برتقالية داكنة */
+}
+
+/* تعديل الأزرار لتكون برتقالية */
+body.theme-orange .btn-view,
+body.theme-orange .filter-toggle-btn,
+body.theme-orange .close-btn {
+    background: #ff5722 !important;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4) !important;
+}
+body.theme-orange .btn-view:hover {
+    background: #ff7043 !important;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.6) !important;
+}
+body.theme-orange .genre-tag {
+    border-color: #ff5722;
+    color: #ff5722;
+    background: rgba(255, 87, 34, 0.15);
+}

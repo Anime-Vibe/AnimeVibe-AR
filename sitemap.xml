@@ -1,0 +1,28 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://anime-vibe.github.io/V-17/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://anime-vibe.github.io/V-17/Movie.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://anime-vibe.github.io/V-17/anime%20series.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://anime-vibe.github.io/V-17/recommended.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://anime-vibe.github.io/V-17/TopAnime.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
